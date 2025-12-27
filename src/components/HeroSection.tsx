@@ -1,4 +1,4 @@
-import { ChevronDown, Sparkles } from "lucide-react";
+import { ChevronDown, Sparkles, Instagram, Send } from "lucide-react";
 import comingSoonImage from "@/assets/coming-soon.jpg";
 
 const HeroSection = () => {
@@ -56,20 +56,41 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in" style={{ animationDelay: "1.2s" }}>
-            <a
-              href="#register"
-              className="px-10 py-4 bg-secondary text-secondary-foreground font-bold rounded-full text-lg hover:bg-secondary/90 transition-all transform hover:scale-105 shadow-lg animate-pulse-glow"
-            >
-              Registration Coming Soon
-            </a>
+          {/* CTA Button */}
+          <div className="flex items-center justify-center mb-8 animate-fade-in" style={{ animationDelay: "1.2s" }}>
             <a
               href="#about"
-              className="px-10 py-4 bg-transparent border-2 border-foreground/30 text-foreground font-medium rounded-full text-lg hover:border-secondary hover:text-secondary transition-all"
+              className="px-10 py-4 bg-secondary text-secondary-foreground font-bold rounded-full text-lg hover:bg-secondary/90 transition-all transform hover:scale-105 shadow-lg"
             >
               Learn More
             </a>
+          </div>
+
+          {/* Social Media Section */}
+          <div className="mb-12 animate-fade-in" style={{ animationDelay: "1.3s" }}>
+            <p className="text-muted-foreground mb-4 text-sm md:text-base">
+              For Further Updates Stay Connected on Social Media With the Links Below
+            </p>
+            <div className="flex items-center justify-center gap-4">
+              <a
+                href="https://instagram.com/aakashmunkashmir"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-full hover:opacity-90 transition-all transform hover:scale-105"
+              >
+                <Instagram className="w-5 h-5" />
+                @aakashmunkashmir
+              </a>
+              <a
+                href="https://t.me/aakashmun2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-[#0088cc] text-white font-medium rounded-full hover:opacity-90 transition-all transform hover:scale-105"
+              >
+                <Send className="w-5 h-5" />
+                Telegram
+              </a>
+            </div>
           </div>
 
           {/* Stats Preview */}
