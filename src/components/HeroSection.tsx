@@ -35,23 +35,23 @@ const HeroSection = () => {
           </div>
 
           {/* Main Title */}
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 md:mb-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             AAKASH <span className="text-gradient-gold">MUN</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl italic text-muted-foreground mb-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <p className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl italic text-muted-foreground mb-3 md:mb-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
             "Debate. Diplomacy. Change."
           </p>
 
           {/* Full Form */}
-          <p className="text-lg md:text-xl text-foreground/80 tracking-wide mb-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+          <p className="text-base sm:text-lg md:text-xl text-foreground/80 tracking-wide mb-6 md:mb-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
             Aakash Model United Nations 2026
           </p>
 
           {/* Tagline */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl px-8 py-4 inline-block mb-10 animate-fade-in glow-gold" style={{ animationDelay: "1s" }}>
-            <p className="text-foreground font-medium">
+          <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl px-4 sm:px-6 md:px-8 py-3 md:py-4 inline-block mb-8 md:mb-10 animate-fade-in glow-gold mx-2" style={{ animationDelay: "1s" }}>
+            <p className="text-foreground font-medium text-sm sm:text-base">
               <span className="text-secondary font-bold">Igniting Diplomacy</span> — Your Voice Shapes Tomorrow
             </p>
           </div>
@@ -68,26 +68,26 @@ const HeroSection = () => {
 
           {/* Social Media Section */}
           <div className="mb-12 animate-fade-in" style={{ animationDelay: "1.3s" }}>
-            <p className="text-muted-foreground mb-4 text-sm md:text-base">
+            <p className="text-muted-foreground mb-4 text-xs sm:text-sm md:text-base px-2">
               For Further Updates Stay Connected on Social Media With the Links Below
             </p>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <a
                 href="https://instagram.com/aakashmunkashmir"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium rounded-full hover:opacity-90 transition-all transform hover:scale-105"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-medium text-sm sm:text-base rounded-full hover:opacity-90 transition-all transform hover:scale-105"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 @aakashmunkashmir
               </a>
               <a
                 href="https://t.me/aakashmun2026"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-[#0088cc] text-white font-medium rounded-full hover:opacity-90 transition-all transform hover:scale-105"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-[#0088cc] text-white font-medium text-sm sm:text-base rounded-full hover:opacity-90 transition-all transform hover:scale-105"
               >
-                <Send className="w-5 h-5" />
+                <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                 Telegram
               </a>
             </div>
