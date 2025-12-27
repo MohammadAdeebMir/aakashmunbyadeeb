@@ -70,27 +70,27 @@ const organizingCommittee2: CommitteeMember[] = [
 
 const TeamSection = () => {
   return (
-    <section id="team" className="py-24 relative overflow-hidden">
+    <section id="team" className="py-12 sm:py-16 md:py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-card via-background to-card" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-2 sm:mb-4">
             Meet <span className="text-gradient-gold">The Team</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-sm sm:text-base md:text-xl text-muted-foreground">
             The Secretariat — Leading the charge for diplomacy
           </p>
         </div>
 
         {/* Secretariat Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-8 mb-10 sm:mb-16 md:mb-20">
           {secretariat.map((member, index) => (
             <div
               key={member.name}
-              className="group bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden card-shadow hover:border-secondary/50 transition-all duration-500"
+              className="group bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl sm:rounded-2xl overflow-hidden card-shadow hover:border-secondary/50 transition-all duration-500"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image */}
@@ -104,56 +104,56 @@ const TeamSection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 -mt-16 relative z-10">
+              <div className="p-3 sm:p-4 md:p-6 -mt-10 sm:-mt-12 md:-mt-16 relative z-10">
                 {/* Name & Role */}
-                <h3 className="font-display text-xl font-bold text-foreground mb-1">
+                <h3 className="font-display text-sm sm:text-base md:text-xl font-bold text-foreground mb-0.5 sm:mb-1 line-clamp-1">
                   {member.name}
                 </h3>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="w-2 h-2 rounded-full bg-secondary" />
-                  <span className="text-secondary font-medium text-sm uppercase tracking-wider">
+                <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-secondary" />
+                  <span className="text-secondary font-medium text-[10px] sm:text-xs md:text-sm uppercase tracking-wider line-clamp-1">
                     {member.role}
                   </span>
                 </div>
                 {member.secondaryRole && (
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="hidden sm:flex items-center gap-2 mb-3">
                     <span className="w-2 h-2 rounded-full bg-secondary/50" />
-                    <span className="text-muted-foreground text-sm uppercase tracking-wider">
+                    <span className="text-muted-foreground text-xs md:text-sm uppercase tracking-wider">
                       {member.secondaryRole}
                     </span>
                   </div>
                 )}
 
-                {/* Quote */}
-                <p className="text-foreground/80 text-sm italic mb-4 border-l-2 border-secondary/50 pl-3">
+                {/* Quote - Hidden on mobile */}
+                <p className="hidden sm:block text-foreground/80 text-xs md:text-sm italic mb-2 md:mb-4 border-l-2 border-secondary/50 pl-2 md:pl-3 line-clamp-2">
                   "{member.quote}"
                 </p>
 
-                {/* Nicknames */}
-                <div className="mb-4">
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                {/* Nicknames - Hidden on mobile */}
+                <div className="hidden sm:block mb-2 md:mb-4">
+                  <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider mb-1 md:mb-2">
                     Other Titles:
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1 md:gap-2">
                     {member.nicknames.map((nickname) => (
                       <span
                         key={nickname}
-                        className="inline-flex items-center gap-1 text-xs bg-muted/50 text-foreground/80 px-2 py-1 rounded-full"
+                        className="inline-flex items-center gap-0.5 md:gap-1 text-[10px] md:text-xs bg-muted/50 text-foreground/80 px-1.5 md:px-2 py-0.5 md:py-1 rounded-full"
                       >
-                        <Star className="w-3 h-3 text-secondary" />
+                        <Star className="w-2 h-2 md:w-3 md:h-3 text-secondary" />
                         {nickname}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Notable Quote */}
-                <div className="bg-muted/30 rounded-lg p-3">
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
+                {/* Notable Quote - Hidden on small mobile */}
+                <div className="hidden sm:block bg-muted/30 rounded-lg p-2 md:p-3">
+                  <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider mb-0.5 md:mb-1">
                     Notable Quote:
                   </p>
-                  <p className="text-sm text-foreground/80 italic flex items-start gap-2">
-                    <Quote className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
+                  <p className="text-xs md:text-sm text-foreground/80 italic flex items-start gap-1 md:gap-2 line-clamp-2">
+                    <Quote className="w-3 h-3 md:w-4 md:h-4 text-secondary shrink-0 mt-0.5" />
                     {member.notableQuote}
                   </p>
                 </div>
@@ -163,28 +163,28 @@ const TeamSection = () => {
         </div>
 
         {/* Organizing Committee Section */}
-        <div className="text-center mb-12">
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <h3 className="font-display text-xl sm:text-2xl md:text-4xl font-bold text-foreground mb-2 sm:mb-4">
             Organizing <span className="text-gradient-gold">Committee</span>
           </h3>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-sm sm:text-base">
             The backbone of Aakash MUN 2026
           </p>
         </div>
 
         {/* Committee Images */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="group relative rounded-2xl overflow-hidden border border-border/50 card-shadow">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-8 max-w-4xl mx-auto">
+          <div className="group relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 card-shadow">
             <img
               src={committee1}
               alt="Organizing Committee"
-              className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full aspect-[3/4] sm:aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="space-y-2">
+            <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 left-2 sm:left-4 md:left-6 right-2 sm:right-4 md:right-6">
+              <div className="space-y-0.5 sm:space-y-1 md:space-y-2">
                 {organizingCommittee1.map((member) => (
-                  <p key={member.name} className="text-foreground font-medium text-lg">
+                  <p key={member.name} className="text-foreground font-medium text-xs sm:text-sm md:text-lg">
                     {member.name}
                   </p>
                 ))}
@@ -192,17 +192,17 @@ const TeamSection = () => {
             </div>
           </div>
 
-          <div className="group relative rounded-2xl overflow-hidden border border-border/50 card-shadow">
+          <div className="group relative rounded-xl sm:rounded-2xl overflow-hidden border border-border/50 card-shadow">
             <img
               src={committee2}
               alt="Organizing Committee"
-              className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full aspect-[3/4] sm:aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="space-y-2">
+            <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 left-2 sm:left-4 md:left-6 right-2 sm:right-4 md:right-6">
+              <div className="space-y-0.5 sm:space-y-1 md:space-y-2">
                 {organizingCommittee2.map((member) => (
-                  <p key={member.name} className="text-foreground font-medium text-lg">
+                  <p key={member.name} className="text-foreground font-medium text-xs sm:text-sm md:text-lg">
                     {member.name}
                   </p>
                 ))}
