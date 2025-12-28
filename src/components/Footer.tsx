@@ -117,6 +117,18 @@ const Footer = () => {
           <p className="text-muted-foreground/60 text-[10px] sm:text-xs mt-1 sm:mt-2">
             Looking Forward To Have You On Board.
           </p>
+          <div className="flex items-center justify-center gap-2 mt-4 sm:mt-6">
+            <span className="text-muted-foreground text-xs sm:text-sm">Made by</span>
+            <span className="text-secondary font-semibold text-xs sm:text-sm">Adeeb</span>
+            <span className="text-pink-500">♥</span>
+            <span className="text-muted-foreground text-xs sm:text-sm">for</span>
+            <img 
+              src={logoImage} 
+              alt="Aakash MUN" 
+              className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-secondary/50"
+            />
+            <span className="text-secondary font-semibold text-xs sm:text-sm">Aakash</span>
+          </div>
         </div>
       </div>
     </footer>
